@@ -14,10 +14,12 @@ int main() {
 
     vector<double> cgpa(n);
 
-    cout << "Enter the CGPAs of the students:\n";
     for (int i = 0; i < n; i++) {
-        cout << "Student " << i + 1 << ": ";
-        cin >> cgpa[i];
+        cgpa[i]=rand()%1000/100.0;
+    }
+    
+    for (int i = 0; i < n; i++) {
+        cout<<cgpa[i]<<" ";
     }
 
     clock_t st = clock();
@@ -36,7 +38,7 @@ int main() {
     clock_t et = clock();
     double time_taken = double(et - st) * 1000.0 / CLOCKS_PER_SEC;
 
-    cout << "Time Taken: " << time_taken << " ms" << endl;
+    cout << "\nTime Taken: " << time_taken << " ms" << endl;
     cout << "The student with the highest CGPA is Student " << max_index + 1 << " with a CGPA of " << max_cgpa << endl;
 
     return 0;
